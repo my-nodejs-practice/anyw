@@ -4,13 +4,17 @@
     "description": "A tiny NodeJS file server.",
     "main": ".eslintrc.js",
     "scripts": {
-        "lint": "eslint .",
-        "fix": "eslint --fix .",
+        "precommit": "lint-staged",
+        "lint": "eslint",
+        "fix": "eslint --fix",
         "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "lint-staged": {
+        "*.js": ["eslint --fix", "git add"]
     },
     "pre-commit": {
         "silent": true,
-        "run": ["fix", "lint"]
+        "run": []
     },
     "repository": {
         "type": "git",
@@ -26,6 +30,8 @@
     "devDependencies": {
         "babel-eslint": "^8.2.3",
         "eslint": "^4.19.1",
+        "husky": "^0.14.3",
+        "lint-staged": "^7.1.1",
         "pre-commit": "^1.2.2"
     }
 }
