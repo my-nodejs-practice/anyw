@@ -1,0 +1,22 @@
+# EditorConfig is awesome: http://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+[*]
+# Unix风格的回车
+end_of_line = lf
+# 代码最后一行插入回车
+insert_final_newline = true
+# 去除行尾空格
+trim_trailing_whitespace = true
+# 规定编码
+charset = utf-8
+# 规定缩进使用：空格
+indent_style = space
+# 规定缩进使用：2个空格
+indent_size = 2
+
+[*.json]
+# 规定json文件缩进使用4个空格
+indent_size = 4

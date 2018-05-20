@@ -1,0 +1,28 @@
+{
+    "name": "anydoor",
+    "version": "1.0.0",
+    "description": "A tiny NodeJS file server.",
+    "main": ".eslintrc.js",
+    "scripts": {
+        "lint": "eslint .",
+        "fix": "eslint --fix .",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "pre-commit": ["fix", "lint"],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/my-nodejs-practice/anydoor.git"
+    },
+    "keywords": [],
+    "author": "lizhigao <lizhigao1231@163.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/my-nodejs-practice/anydoor/issues"
+    },
+    "homepage": "https://github.com/my-nodejs-practice/anydoor#readme",
+    "devDependencies": {
+        "babel-eslint": "^8.2.3",
+        "eslint": "^4.19.1",
+        "pre-commit": "^1.2.2"
+    }
+}
