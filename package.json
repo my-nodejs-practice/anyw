@@ -5,12 +5,12 @@
     "main": ".eslintrc.js",
     "scripts": {
         "precommit": "lint-staged",
-        "lint": "eslint",
-        "fix": "eslint --fix",
+        "lint": "eslint .",
+        "fix": "eslint --fix .",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "lint-staged": {
-        "*.js": ["eslint --fix", "git add"]
+        "*.js": ["eslint --fix .", "git add"]
     },
     "pre-commit": {
         "silent": true,
