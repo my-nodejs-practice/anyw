@@ -11,10 +11,6 @@
     "lint-staged": {
         "*.js": ["eslint --fix .", "git add"]
     },
-    "pre-commit": {
-        "silent": true,
-        "run": ["precommit"]
-    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/my-nodejs-practice/anydoor.git"
