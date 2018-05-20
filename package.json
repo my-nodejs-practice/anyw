@@ -8,7 +8,10 @@
         "fix": "eslint --fix .",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "pre-commit": ["fix", "lint"],
+    "pre-commit": {
+        "silent": true,
+        "run": ["fix", "lint"]
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/my-nodejs-practice/anydoor.git"
