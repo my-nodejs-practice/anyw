@@ -14,7 +14,7 @@
     },
     "pre-commit": {
         "silent": true,
-        "run": []
+        "run": ["precommit"]
     },
     "repository": {
         "type": "git",
