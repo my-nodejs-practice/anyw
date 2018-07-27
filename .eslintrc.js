@@ -5,10 +5,10 @@ module.exports = {
     node: true
   },
   parser: 'babel-eslint',
-  // parserOptions: {
-  //   ecmaVersion: 6, // default: 5
-  //   sourceType: 'script' // default
-  // },
+  parserOptions: {
+    ecmaVersion: 6, // default: 5
+    sourceType: 'script' // default
+  },
   extends: 'eslint:recommended',
   rules: {
     indent: ['error', 2],
