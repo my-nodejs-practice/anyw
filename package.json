@@ -11,7 +11,7 @@
     "lint-staged": {
         "*.js": [
             "eslint --fix .",
-            "prettier --single-quote --write src/**",
+            "prettier --single-quote --write src/**/*.{js,json}",
             "git add"
         ]
     },
@@ -34,6 +34,7 @@
         "prettier": "1.12.1"
     },
     "dependencies": {
-        "chalk": "^2.4.1"
+        "chalk": "^2.4.1",
+        "handlebars": "^4.0.11"
     }
 }
