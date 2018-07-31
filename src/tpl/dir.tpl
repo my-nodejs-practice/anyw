@@ -6,14 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{title}}</title>
-  <style>
-    p {
-      margin: 0;
-    }
-    a {
-      font-size: 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="/src/tpl/dir.css">
 </head>
 
 <body>
