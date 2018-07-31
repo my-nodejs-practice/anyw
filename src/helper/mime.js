@@ -62,11 +62,26 @@ const mimeTypes = {
   '.7z': 'application/x-7z-compressed'
 };
 
-module.exports = filePath => {
+function getMimeType(filePath) {
   const ext = filePath
     .split('.')
     .pop()
     .toLowerCase();
   const mimeType = mimeTypes['.' + ext];
-  return mimeType || 'text/plain';
+  return `${mimeType || 'text/plain'}; charset=utf-8`;
+}
+
+function getFileIcon(filePath) {
+  if (filePath.indexOf('.') === -1) {
+    return '文件夹';
+  }
+  return filePath
+    .split('.')
+    .pop()
+    .toLowerCase();
+}
+
+module.exports = {
+  getMimeType,
+  getFileIcon
 };
