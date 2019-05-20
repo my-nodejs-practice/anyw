@@ -35,6 +35,7 @@
     },
     "dependencies": {
         "chalk": "^2.4.1",
+        "etag": "^1.8.1",
         "handlebars": "^4.0.11"
     }
 }

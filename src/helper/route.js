@@ -6,6 +6,7 @@ const config = require('../config/default_config');
 const mime = require('./mime');
 const compress = require('./compress');
 const range = require('./range');
+const isFresh = require('./cache');
 
 const stat = promisify(fs.stat);
 const readdir = promisify(fs.readdir);
@@ -20,6 +21,12 @@ module.exports = async function({ req, res, filePath }) {
     if (stats.isFile()) {
       res.statusCode = 200;
       res.setHeader('Content-Type', mime.getMimeType(filePath));
+
+      if (isFresh(stats, req, res)) {
+        res.statusCode = 304;
+        res.end();
+        return;
+      }
 
       let rs;
       // 部分获取
