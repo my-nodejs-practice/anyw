@@ -1,6 +1,6 @@
-# anydoor
+# anyw
 
-A tiny NodeJS file server.
+一个迷你的 NodeJS 静态资源服务器。
 
 ## 安装
 
