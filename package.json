@@ -18,7 +18,7 @@
         "type": "git",
         "url": "git+https://github.com/my-nodejs-practice/anyw.git"
     },
-    "keywords": [],
+    "keywords": ["anyw", "anywhere"],
     "author": "lizhigao <lizhigao1231@163.com>",
     "license": "MIT",
     "bugs": {
