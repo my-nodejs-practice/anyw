@@ -1,31 +1,30 @@
 {
-    "name": "anydoor",
-    "version": "1.0.0",
+    "name": "anyw",
+    "version": "0.0.1",
     "description": "A tiny NodeJS file server.",
-    "main": ".eslintrc.js",
+    "main": "src/app.js",
+    "bin": {
+        "anyw": "bin/anyw"
+    },
     "scripts": {
         "precommit": "lint-staged",
         "fixlint": "eslint --fix . && eslint .",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "lint-staged": {
-        "*.js": [
-            "eslint --fix .",
-            "prettier --single-quote --write src/**/*.{js,json}",
-            "git add"
-        ]
+        "*.js": ["eslint --fix .", "prettier --single-quote --write src/**/*.{js,json}", "git add"]
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/my-nodejs-practice/anydoor.git"
+        "url": "git+https://github.com/my-nodejs-practice/anyw.git"
     },
     "keywords": [],
     "author": "lizhigao <lizhigao1231@163.com>",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/my-nodejs-practice/anydoor/issues"
+        "url": "https://github.com/my-nodejs-practice/anyw/issues"
     },
-    "homepage": "https://github.com/my-nodejs-practice/anydoor#readme",
+    "homepage": "https://github.com/my-nodejs-practice/anyw#readme",
     "devDependencies": {
         "babel-eslint": "^8.2.3",
         "eslint": "^4.19.1",
@@ -36,6 +35,7 @@
     "dependencies": {
         "chalk": "^2.4.1",
         "etag": "^1.8.1",
-        "handlebars": "^4.0.11"
+        "handlebars": "^4.1.2",
+        "yargs": "^13.2.4"
     }
 }

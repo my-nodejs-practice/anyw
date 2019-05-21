@@ -2,7 +2,6 @@ const fs = require('fs');
 const path = require('path');
 const promisify = require('util').promisify;
 const Handlebars = require('handlebars');
-const config = require('../config/default_config');
 const mime = require('./mime');
 const compress = require('./compress');
 const range = require('./range');
@@ -14,7 +13,7 @@ const readdir = promisify(fs.readdir);
 const source = fs.readFileSync(path.join(__dirname, '../tpl/dir.tpl'));
 const tpl = Handlebars.compile(source.toString());
 
-module.exports = async function({ req, res, filePath }) {
+module.exports = async function({ req, res, filePath, config }) {
   try {
     const stats = await stat(filePath);
     // console.log('stats>>', stats);
